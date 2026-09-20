@@ -1,0 +1,77 @@
+{
+  "generated_at": 1789876698.536,
+  "server": "",
+  "tools": {
+    "delete_budget": {
+      "annotations_hash": "82272023a59a5f6f7d7687351c3d41db",
+      "description_hash": "da30892f423799fa9bab39178c107921",
+      "fingerprint": "716434c1291a50896e10e6c5eb626c88",
+      "name_hash": "860c156a9c4e099f05d87f9f8b8d817e",
+      "schema_hash": "b54a1d2bc4050ba0ff899821dbe57780"
+    },
+    "get_alerts": {
+      "annotations_hash": "1f9a7cc7c90c44b618038e5951cb3d33",
+      "description_hash": "ba5b58556ce5e23b050900537d6450cc",
+      "fingerprint": "7841e155d416ed1bbd17173151c62d7e",
+      "name_hash": "9b7e30638f594e8bf030f7ffade7f757",
+      "schema_hash": "9e2fcd061b033258d31fc0f42563ff02"
+    },
+    "get_alert\u0455": {
+      "annotations_hash": "1f9a7cc7c90c44b618038e5951cb3d33",
+      "description_hash": "d1f207aef81d1e6dd3bc78b2f1d18dd0",
+      "fingerprint": "eba17957c1958578d75a4d593f1043af",
+      "name_hash": "2c459e8f917632451d77aeff57971d3a",
+      "schema_hash": "e991eca4e1c1a5bfe30c1c18c780453e"
+    },
+    "get_cost_report": {
+      "annotations_hash": "1f9a7cc7c90c44b618038e5951cb3d33",
+      "description_hash": "0b1a43264b4e00f1c2f9cd69e7b40445",
+      "fingerprint": "67bc8796195248f20bbc055716d687c1",
+      "name_hash": "9e73b6cbb97ed6504e5b297884a9b2c7",
+      "schema_hash": "7986e2f3c9a409596a157393d5286595"
+    },
+    "get_runbook": {
+      "annotations_hash": "1f9a7cc7c90c44b618038e5951cb3d33",
+      "description_hash": "7a57145ac7187aa83c5c3199b2cea98b",
+      "fingerprint": "f3ebdc545340693df63cb71fbdcad82f",
+      "name_hash": "b19c3064ad1a8f491e601d00e878a586",
+      "schema_hash": "b092fc73e07dc975397ed4c615785a92"
+    },
+    "refresh": {
+      "annotations_hash": "44136fa355b3678a1146ad16f7e8649e",
+      "description_hash": "12ae32cb1ec02d01eda3581b127c1fee",
+      "fingerprint": "50baf35edfe159ab3de3265a078eb294",
+      "name_hash": "e9423b395d6cbbd9188f8e0b63e3a3c8",
+      "schema_hash": "9e2fcd061b033258d31fc0f42563ff02"
+    },
+    "run_diagnostic": {
+      "annotations_hash": "6135b8b71f95c75e47df7d989fb874b1",
+      "description_hash": "902786a454d17785412164639bb92aa8",
+      "fingerprint": "6aaa7e1edc4380e3cf456a1b4f744509",
+      "name_hash": "4368141f01db6b6d02753e0639b43165",
+      "schema_hash": "8a250595e0f8fa202cc74ba19f794998"
+    },
+    "run_query": {
+      "annotations_hash": "1f9a7cc7c90c44b618038e5951cb3d33",
+      "description_hash": "694b86cfd4503e4816ebdb718792b777",
+      "fingerprint": "b298130a953a2917873fc0981083f77e",
+      "name_hash": "a11726a2e5920f5e944fe9c3fc2ac53e",
+      "schema_hash": "e897ad678e44b09ca544c259ded66ce3"
+    },
+    "search_resources": {
+      "annotations_hash": "82272023a59a5f6f7d7687351c3d41db",
+      "description_hash": "4b293a3d006a73486cacfe07b2aae1e2",
+      "fingerprint": "469cc414eb81355fd6cdc626be1fb7c4",
+      "name_hash": "47de386ce0a8be98a466343658b58a99",
+      "schema_hash": "5fa7a001c57b4df0d72265f39ee1dbf1"
+    },
+    "set_model_response": {
+      "annotations_hash": "1f9a7cc7c90c44b618038e5951cb3d33",
+      "description_hash": "f9f0b6cac2a891762ac5629e9e7d59c1",
+      "fingerprint": "c49d16de6a23d2214ef6bfd4ffbd833a",
+      "name_hash": "572f9eed9e24318c2449815b7bd8ca57",
+      "schema_hash": "6520817ad1c3c311ec4bde85bb1c55f2"
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,51 @@
+name: reproduce the audit
+
+# The audit is a document asserting that specific problems exist in a specific revision
+# of this server. That is a claim, and a claim about code rots the moment the code
+# changes - so the report is treated as a test rather than as prose.
+#
+# The step below fails when a documented finding stops reproducing, when an unexpected
+# finding appears, when a tool the report calls clean is reported, or when the committed
+# policy is not what the current declarations generate.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      # Pinned to the release the report was produced with, so this repository cannot
+      # go red because the tool moved - and cannot pass because the tool changed.
+      - name: Install the auditor at the version the report used
+        run: pip install "git+https://github.com/sushant-me/mcpaudit@v0.1.1"
+      - name: Every finding in the report still reproduces
+        run: python3 demo.py
+      - name: The lock file still detects a changed description
+        run: python3 demo.py --drift
+      - name: The server answers tools/list
+        run: |
+          printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}' \
+            | python3 server/server.py > /tmp/response.json
+          python3 - <<'PY'
+          import json
+          payload = json.load(open("/tmp/response.json"))
+          tools = payload["result"]["tools"]
+          assert len(tools) == 10, len(tools)
+          assert any(t["name"] == "set_model_response" for t in tools)
+          print(f"tools/list returned {len(tools)} declarations")
+          PY
