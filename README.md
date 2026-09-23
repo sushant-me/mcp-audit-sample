@@ -1,5 +1,11 @@
 # mcp-audit-sample
 
+> **Do not install or connect this.** It is a synthetic test fixture written to
+> demonstrate a scanner. It is deliberately vulnerable, it is not published to any
+> package registry, and it should never be connected to an agent or pointed at real
+> data. The vulnerable code is the point — it is the specimen the report is written
+> against.
+
 **A deliberately risky MCP server, and the audit report I would return for it.**
 
 Every security review is sold before it is bought, and the hardest part of that is that
